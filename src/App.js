@@ -16,18 +16,19 @@ function App() {
     .then(req => req.json()
     .then(res => {
       setImages({ images: res.hits })
-      console.log(images);
-      console.log(searchQ);
+      console.log("images fetch", images);
+      console.log("searchQ fetch", searchQ);
     }))    
   }, [searchQ])
 
   return (
-    <div className="App">
+    <div>
       <div>
         <ImageSearch searchImages={(searchQ) => setSearchQ(searchQ)}/>
+        <hr />
+        <ImageResults images={images}/>
       </div>
       <div>
-        <ImageResults />
       </div>
     </div>
   );
