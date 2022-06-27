@@ -29,8 +29,8 @@ class App extends React.Component {
         <hr />
         <ImageResults images={this.state.images}/>
         </div>
-        <div>
-          <p>Powered by: <img src="https://pixabay.com/static/img/logo.png" alt={""}></img></p>
+        <div style={{display: "flex", justifyContent: "flex-start", alignItems: "center", marginTop: "400px", marginLeft: "5px", height: "35px"}}>
+          <p>Powered by: <img src="https://pixabay.com/static/img/logo.png" alt={""} style={{width: "120px", height: "25px", marginTop: "5px"}}></img></p>
         </div>
       </div>
     )
