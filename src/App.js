@@ -17,8 +17,6 @@ class App extends React.Component {
     const req = await fetch(url);
     const res = await req.json();
     this.setState({ images: res.hits })
-    console.log(this.state.images);
-    console.log(searchQ);
   }
 
   render() {
@@ -30,40 +28,11 @@ class App extends React.Component {
         <ImageResults images={this.state.images}/>
         </div>
         <div style={{display: "flex", justifyContent: "flex-start", alignItems: "center", marginTop: "400px", marginLeft: "5px", height: "35px"}}>
-          <p>Powered by: <img src="https://pixabay.com/static/img/logo.png" alt={""} style={{width: "120px", height: "25px", marginTop: "5px"}}></img></p>
+          <p>Powered by: <a href="https://pixabay.com/api/docs/"><img src="https://pixabay.com/static/img/logo.png" target="" alt={""} style={{width: "120px", height: "25px", marginTop: "5px"}}></img></a></p>
         </div>
       </div>
     )
   }
 }
-
-
-
-// function App() {
-//   const [images, setImages] = useState([]);
-//   const [searchQ, setSearchQ] = useState("");
-
-//   useEffect(() => {
-//     const url = `https://pixabay.com/api/?key=${API_KEY}&q=${searchQ}&image_type=photo`;
-
-//     fetch(url)
-//     .then(req => req.json()
-//     .then(res => {
-//       setImages({ images: res.hits })
-//     }))    
-//   }, [searchQ])
-
-//   return (
-//     <div>
-//       <div>
-//         <ImageSearch searchImages={(searchQ) => setSearchQ(searchQ)}/>
-//         <hr />
-//         <ImageResults images={images}/>
-//       </div>
-//       <div>
-//       </div>
-//     </div>
-//   );
-// }
 
 export default App;

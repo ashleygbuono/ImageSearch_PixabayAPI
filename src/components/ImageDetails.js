@@ -3,8 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 
 function ImageDetails(props) {
     const location = useLocation();
-    console.log("image detail props", props);
-    //console.log("imageDetails location", location.state.image);
 
     return (
         <div>
@@ -19,7 +17,7 @@ function ImageDetails(props) {
                 </div>
             </div>
             <div style={{display: "flex", justifyContent: "flex-start", alignItems: "center", marginTop: "40px", marginLeft: "5px", height: "35px"}}>
-                <p>Powered by: <img src="https://pixabay.com/static/img/logo.png" alt={""} style={{width: "120px", height: "25px", marginTop: "5px"}}></img></p>
+                <p>Powered by: <a href="https://pixabay.com/api/docs/"><img src="https://pixabay.com/static/img/logo.png" alt={""} style={{width: "120px", height: "25px", marginTop: "5px"}}></img></a></p>
             </div>
         </div>
     )
