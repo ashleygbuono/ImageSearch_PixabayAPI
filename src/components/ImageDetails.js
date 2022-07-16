@@ -13,7 +13,7 @@ function ImageDetails(props) {
                 <div style={{border: "solid 2px", borderRadius: "10px", padding: "1rem"}}>
                     <p>Photo by: {location.state.image.user}</p>
                     <p>Tags: {location.state.image.tags}</p>
-                    <button style={{borderRadius: "10px", height: "2rem", border: "outset 2px"}}><Link to="/">Home</Link></button>
+                    <button style={{borderRadius: "10px", height: "2rem", border: "outset 2px"}}><Link to="/">Back</Link></button>
                 </div>
             </div>
             <div style={{display: "flex", justifyContent: "flex-start", alignItems: "center", marginTop: "40px", marginLeft: "5px", height: "35px"}}>

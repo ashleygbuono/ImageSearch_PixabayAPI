@@ -3,8 +3,7 @@ import "./App.css";
 import ImageSearch from './components/ImageSearch';
 import ImageResults from './components/ImageResults';
 
-const API_KEY = '28291536-2cdcaa97dc7ea649bd02bf0cf';
-
+const API_KEY = process.env.REACT_APP_API_KEY;
 class App extends React.Component {
 
   state = { images: [] }
